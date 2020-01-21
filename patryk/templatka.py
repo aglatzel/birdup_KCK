@@ -82,7 +82,7 @@ if __name__ == "__main__":
 
     pygame.init()
 
-    gravity = 0.02
+    gravity = 0.09
 
     def setVariables() :
         global dead
@@ -102,7 +102,7 @@ if __name__ == "__main__":
         Bird.vel = 0
 
     win = pygame.display.set_mode((800, 600))
-    pygame.display.set_caption("Flappy Bird!")
+    pygame.display.set_caption("Patryk skoczek ; )")
     img = pygame.image.load('patryk.png')
     bg = pygame.image.load('tło.jpg')
     pipe = pygame.image.load('alga2.png')
@@ -130,7 +130,7 @@ if __name__ == "__main__":
             Bird.getAngle()
 
         def jump() :
-            Bird.vel = -10
+            Bird.vel = -4
 
         def getAngle() :
             global bird
