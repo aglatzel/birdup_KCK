@@ -82,7 +82,7 @@ if __name__ == "__main__":
 
     pygame.init()
 
-    gravity = 0.05
+    gravity = 0.02
 
     def setVariables() :
         global dead
@@ -161,9 +161,9 @@ if __name__ == "__main__":
                         die()
 
     def pipePair() :
-        r = randint(75, 350)
+        r = randint(150, 300)
         pipes.append(Pipe("DOWN", 900, r))
-        pipes.append(Pipe("UP", 900, 600-(r+125)))
+        pipes.append(Pipe("UP", 900, 600-(r+200)))
         global score
         score += 1
 
@@ -217,6 +217,9 @@ if __name__ == "__main__":
         pygame.display.update()
         if not dead:
             runs += 1
+        if dead:
+            setVariables()
+
     quit_program.set()
     pygame.quit()
 
