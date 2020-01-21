@@ -103,10 +103,10 @@ if __name__ == "__main__":
 
     win = pygame.display.set_mode((800, 600))
     pygame.display.set_caption("Flappy Bird!")
-    img = pygame.image.load('birdup.png')
-    bg = pygame.image.load('birdupbg.png')
-    pipe = pygame.image.load('birduppipe.png')
-    ground = pygame.image.load('birdupground.png')
+    img = pygame.image.load('patryk.png')
+    bg = pygame.image.load('tło.jpg')
+    pipe = pygame.image.load('alga2.png')
+    ground = pygame.image.load('piasek.jpg')
     font = pygame.font.SysFont('Comic Sans MS', 30)
 
     class Bird :
@@ -197,7 +197,7 @@ if __name__ == "__main__":
                         started = True
                     if not dead :
                         Bird.jump()
-            if event.type == pygame.QUIT :
+            elif event.type == pygame.QUIT :
                 run = False
         blink.value = 0
         win.blit(bg, (0, 0))
@@ -217,7 +217,7 @@ if __name__ == "__main__":
         pygame.display.update()
         if not dead:
             runs += 1
-
+    quit_program.set()
     pygame.quit()
 
     '''
