@@ -6,7 +6,7 @@ import blink as blk
 import pygame, math
 from random import randint
 from time import sleep
-#from pyOpenBCI import OpenBCIGanglion
+from pyOpenBCI import OpenBCIGanglion
 
 
 def blinks_detector(quit_program, blink_det, blinks_num, blink,):
@@ -35,7 +35,7 @@ def blinks_detector(quit_program, blink_det, blinks_num, blink,):
 
 
 ####################################################
-    SYMULACJA_SYGNALU = True
+    SYMULACJA_SYGNALU = False
 ####################################################
     mac_adress = 'd2:b4:11:81:48:ad'
 ####################################################
